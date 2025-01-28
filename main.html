@@ -4,9 +4,38 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<style>
+	#container {
+  margin: 20px;
+  position: relative; /* To ensure pseudo-elements are positioned relative to the container */
+  padding: 20px; /* Optional padding for inner content */
+  background-color: #f9f9f9; /* Optional background for the container */
+}
+
+/* Pseudo-element to insert content before the main content of the container */
+#container::before {
+  content: "Before content";
+  color: #f00; /* Red color */
+  font-size: 20px; /* Font size */
+  display: block; /* Ensures the content appears on its own line */
+  margin-bottom: 10px; /* Optional space below the before content */
+}
+
+/* Pseudo-element to insert content after the main content of the container */
+#container::after {
+  content: "After content  ";
+  color: #f00; /* Red color */
+  font-size: 20px; /* Font size */
+  display: block; /* Ensures the content appears on its own line */
+  margin-top: 10px; /* Optional space above the after content */
+}
+	</style>
 </head>
 
 <body>
+	<div id="container">
+		<p>Hello Guys</p>
+	</div>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
